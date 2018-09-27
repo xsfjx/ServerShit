@@ -1,5 +1,6 @@
 package com.servershit;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
         Button setBtn = findViewById(R.id.setBtn);
         Button getBtn = findViewById(R.id.getBtn);
 
+        findViewById(R.id.noteBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this , RecycleViewActivity.class));
+            }
+        });
 
         setBtn.setOnClickListener(new View.OnClickListener() {
             @Override

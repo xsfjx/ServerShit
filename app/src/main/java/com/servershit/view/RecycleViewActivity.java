@@ -1,4 +1,4 @@
-package com.servershit;
+package com.servershit.view;
 
 import android.content.DialogInterface;
 import android.os.Build;
@@ -16,6 +16,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.servershit.R;
+import com.servershit.database.DatabaseHelper;
+import com.servershit.database.model.NoteDto;
+import com.servershit.tools.MyApplication;
+import com.servershit.utils.RecyclerTouchListener;
 
 import java.util.ArrayList;
 import java.util.List;

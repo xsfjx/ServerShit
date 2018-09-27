@@ -1,7 +1,9 @@
-package com.servershit;
+package com.servershit.utils;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
+import com.servershit.tools.MyApplication;
 
 public class SharedPref {
 

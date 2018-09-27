@@ -1,11 +1,11 @@
-package com.servershit;
+package com.servershit.tools;
 
 import android.app.Application;
 import android.content.Context;
 
 public class MyApplication extends Application {
 
-    static Context context;
+    public static Context context;
 
     @Override
     public void onCreate() {

@@ -1,4 +1,4 @@
-package com.servershit;
+package com.servershit.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import com.servershit.R;
+import com.servershit.utils.SharedPref;
 
 public class MainActivity extends AppCompatActivity {
 

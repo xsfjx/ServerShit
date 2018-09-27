@@ -1,4 +1,4 @@
-package com.servershit;
+package com.servershit.view;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.servershit.R;
+import com.servershit.database.model.NoteDto;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

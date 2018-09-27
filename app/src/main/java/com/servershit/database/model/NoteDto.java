@@ -1,4 +1,4 @@
-package com.servershit;
+package com.servershit.database.model;
 
 public class NoteDto {
 

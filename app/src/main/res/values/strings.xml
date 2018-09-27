@@ -11,4 +11,6 @@
     <string name="single">Single?</string>
     <string name="set">Set</string>
     <string name="get">Get</string>
+    <string name="notes">Notes</string>
+    <string name="new_note">New Note</string>
 </resources>

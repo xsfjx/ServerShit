@@ -9,13 +9,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.servershit.R;
+import com.servershit.api.Change;
+import com.servershit.api.Controller;
 import com.servershit.utils.InternetReceiver;
 
 import java.io.IOException;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 public class BroadcastReceiverActivity extends AppCompatActivity {
 
@@ -27,16 +33,10 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_broadcast_receiver);
 
-        InternetReceiver receiver = new InternetReceiver();
-        registerReceiver(receiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
-
         initReceiver();
-        try {
-            String res = initOkhttp("https://raw.github.com/square/okhttp/master/README.md");
-            Log.i("Log : ", "okHttp response : " + res);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        Controller controller = new Controller();
+        controller.start();
     }
 
     private void initReceiver() {
@@ -44,13 +44,8 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
         registerReceiver(receiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private String initOkhttp(String url) throws IOException {
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
-        try (Response response = client.newCall(request).execute()) {
-            return response.body().string();
-        }
+    public interface GerritAPI  {
+        @GET("changes/")
+        Call<List<Change>> loadChanges(@Query("q") String status);
     }
 }

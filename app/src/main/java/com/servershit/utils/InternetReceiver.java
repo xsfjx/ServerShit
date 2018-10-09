@@ -5,9 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-public class InternetReceiver extends BroadcastReceiver
-
-    {
+public class InternetReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -17,6 +15,6 @@ public class InternetReceiver extends BroadcastReceiver
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        throw new UnsupportedOperationException("Not yet implemented");
+        //throw new UnsupportedOperationException("Not yet implemented");
     }
 }

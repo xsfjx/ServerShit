@@ -13,4 +13,6 @@
     <string name="get">Get</string>
     <string name="notes">Notes</string>
     <string name="new_note">New Note</string>
+    <string name="sharedPreferences">Shared Preferences</string>
+    <string name="broadcast_receiver">BroadCast Receiver</string>
 </resources>
